@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="js/theme.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Comic Shop | New Comics &amp; Back Issues in Oviedo, FL</title>
+  <meta name="description" content="A Comic Shop is an independently owned comic book store in Oviedo, FL — new comics every Wednesday, back issues by the long box, graphic novels, and twenty years of fan service.">
+  <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/icons/icon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/icons/icon-16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== ICON SPRITE ===== -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+  </symbol>
+  <symbol id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/>
+  </symbol>
+  <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 12h14M13 6l6 6-6 6"/>
+  </symbol>
+  <symbol id="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M5 13l4 4L19 7"/>
+  </symbol>
+  <symbol id="icon-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M6 6l12 12M18 6L6 18"/>
+  </symbol>
+  <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12 2l2.9 6.3 6.9.7-5.2 4.6 1.6 6.8L12 16.9 5.8 20.4l1.6-6.8L2.2 9l6.9-.7z"/>
+  </symbol>
+  <symbol id="icon-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>
+  </symbol>
+  <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+  </symbol>
+  <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+  </symbol>
+  <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>
+  </symbol>
+  <symbol id="icon-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4 5c2.5-1.5 5.5-1.5 8 0 2.5-1.5 5.5-1.5 8 0v13c-2.5-1.5-5.5-1.5-8 0-2.5-1.5-5.5-1.5-8 0z"/><path d="M12 5v13"/>
+  </symbol>
+  <symbol id="icon-box" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M3 8v9l9 4 9-4V8"/><path d="M12 12v9"/>
+  </symbol>
+  <symbol id="icon-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M20.59 13.41 11 4H4v7l9.59 9.59a2 2 0 0 0 2.82 0l4.18-4.18a2 2 0 0 0 0-2.82z"/><circle cx="8" cy="8" r="1.2"/>
+  </symbol>
+  <symbol id="icon-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+  </symbol>
+  <symbol id="icon-pen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4z"/>
+  </symbol>
+  <symbol id="icon-mic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 19v3M8 22h8"/>
+  </symbol>
+  <symbol id="icon-shirt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M16 3l6 3-3 4-2-1v11H7V9l-2 1-3-4 6-3a4 4 0 0 0 8 0z"/>
+  </symbol>
+</svg>
+
+<!-- ===== NAV ===== -->
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="#top" class="nav-logo">
+      <span class="logo-mark" aria-hidden="true">A<span class="logo-mark-burst"></span></span>
+      <span class="nav-logo-text">A Comic Shop<span>Oviedo, FL</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#new-releases" class="nav-link">New Releases</a>
+      <a href="#shop" class="nav-link">Shop</a>
+      <a href="#long-boxes" class="nav-link">Long Boxes</a>
+      <a href="#community" class="nav-link">Events</a>
+      <a href="#about" class="nav-link">Our Story</a>
+      <a href="#visit" class="nav-link">Visit</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="#pull-list" class="btn btn-primary btn-sm">Start a Pull List</a>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+        <svg class="icon-sun" width="17" height="17"><use href="#icon-sun"/></svg>
+        <svg class="icon-moon" width="17" height="17"><use href="#icon-moon"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#new-releases" class="mobile-link">New Releases</a></li>
+    <li><a href="#shop" class="mobile-link">Shop</a></li>
+    <li><a href="#long-boxes" class="mobile-link">Long Boxes</a></li>
+    <li><a href="#community" class="mobile-link">Events</a></li>
+    <li><a href="#about" class="mobile-link">Our Story</a></li>
+    <li><a href="#visit" class="mobile-link">Visit</a></li>
+  </ul>
+  <a href="#pull-list" class="btn btn-primary btn-full" style="margin-bottom:10px;">Start a Pull List</a>
+  <button class="theme-toggle theme-toggle-mobile" id="theme-toggle-mobile" type="button" aria-label="Toggle light and dark theme">
+    <svg class="icon-sun" width="17" height="17"><use href="#icon-sun"/></svg>
+    <svg class="icon-moon" width="17" height="17"><use href="#icon-moon"/></svg>
+    <span class="theme-label-dark">Shop Floor Mode</span>
+    <span class="theme-label-light">After Hours Mode</span>
+  </button>
+</div>
+
+<main>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="hero-halftone" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badges">
+          <span class="hero-badge"><svg width="13" height="13"><use href="#icon-star"/></svg> Voted Best Comic Shop in Orlando</span>
+          <span class="hero-badge">Est. 2005 &middot; Oviedo, FL</span>
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Focused on</span>
+          <span class="hero-title-line hero-title-accent">Fan Service.</span>
+        </h1>
+        <p class="hero-sub">Twenty years of new comics every Wednesday, back issues sorted by the long box, and a crew that actually reads what it sells. Independently owned, Oviedo raised.</p>
+        <div class="hero-actions">
+          <a href="#new-releases" class="btn btn-primary btn-lg">See What's New <svg width="15" height="15"><use href="#icon-arrow"/></svg></a>
+          <a href="#visit" class="btn btn-outline btn-lg">Get Directions</a>
+        </div>
+      </div>
+      <div class="hero-rack" aria-hidden="true">
+        <div class="cover-card cover-card--1"><span class="cover-halftone"></span><span class="cover-spine"></span><span class="cover-label">COSMIC<br>RANGER</span><span class="cover-issue">#14</span></div>
+        <div class="cover-card cover-card--2"><span class="cover-halftone"></span><span class="cover-spine"></span><span class="cover-label">HOLLOW<br>CREEK</span><span class="cover-issue">#2</span></div>
+        <div class="cover-card cover-card--3"><span class="cover-halftone"></span><span class="cover-spine"></span><span class="cover-label">SIGNAL<br>LOST</span><span class="cover-issue">#8</span></div>
+        <div class="cover-card cover-card--4"><span class="cover-halftone"></span><span class="cover-spine"></span><span class="cover-label">PAPER MOON<br>DINER</span><span class="cover-issue">#6</span></div>
+        <div class="cover-burst">NEW<br>THIS<br>WEEK</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="section-padding stats-section">
+    <div class="container">
+      <div class="stats-strip reveal-up">
+        <div class="stat">
+          <div class="stat-num" data-count="20">0</div><span class="stat-plus">+</span>
+          <p class="stat-label">Years of Fan Service</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="300">0</div><span class="stat-plus">+</span>
+          <p class="stat-label">New Comics Every Wednesday</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="6">0</div>
+          <p class="stat-label">Genres in the Long Boxes</p>
+        </div>
+        <div class="stat">
+          <div class="stat-num" data-count="1000">0</div><span class="stat-plus">+</span>
+          <p class="stat-label">Pull List Subscribers</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NEW RELEASES / MARQUEE ===== -->
+  <section class="new-releases" id="new-releases">
+    <div class="container new-releases-head reveal-up">
+      <p class="eyebrow">New Comic Book Day</p>
+      <h2 class="section-title">Every Wednesday, the wall<br>gets <em>rebuilt</em>.</h2>
+      <p class="section-sub">New issues bagged, boarded, and up on the wall before we unlock the doors. Here's a taste of what's landing this week.</p>
+    </div>
+    <div class="marquee-strip">
+      <div class="marquee-track" id="marquee-track">
+        <!-- populated by js/main.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PULL LIST + SHOP CATEGORIES ===== -->
+  <section class="section-padding" id="pull-list">
+    <div class="container">
+      <div class="pull-split">
+        <div class="pull-copy reveal-up">
+          <p class="eyebrow">The Pull List</p>
+          <h2 class="section-title">Never miss<br>an issue.</h2>
+          <p class="section-sub">Tell us what you follow and we'll have it bagged and waiting under your name every Wednesday. No subscriptions, no shipping fees — just walk in and grab your stack.</p>
+          <ul class="pull-list-points">
+            <li><svg width="16" height="16"><use href="#icon-check"/></svg> Held for two weeks, no questions asked</li>
+            <li><svg width="16" height="16"><use href="#icon-check"/></svg> Add or drop titles any time</li>
+            <li><svg width="16" height="16"><use href="#icon-check"/></svg> First look at variant covers &amp; exclusives</li>
+          </ul>
+          <a href="#pull-form" class="btn btn-primary">Start Your Pull List</a>
+        </div>
+        <div class="pull-demo reveal-up" aria-hidden="true">
+          <div class="pull-receipt">
+            <div class="pull-receipt-head">
+              <span>YOUR PULL LIST</span>
+              <span class="pull-receipt-name">— J. RIVERA —</span>
+            </div>
+            <ul class="pull-receipt-items" id="pull-receipt-items"></ul>
+            <div class="pull-receipt-foot">Ready every Wednesday</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" id="shop" style="padding-top:0;">
+    <div class="container">
+      <div class="section-header center reveal-up">
+        <p class="eyebrow">In the Shop</p>
+        <h2 class="section-title">Four ways to leave<br>with something good.</h2>
+      </div>
+      <div class="shop-grid">
+        <div class="shop-card">
+          <div class="shop-card-icon"><svg width="22" height="22"><use href="#icon-book"/></svg></div>
+          <h3>New Comics</h3>
+          <p>Every major publisher, every Wednesday — bagged, boarded, and sorted by title on the new-release wall.</p>
+        </div>
+        <div class="shop-card">
+          <div class="shop-card-icon"><svg width="22" height="22"><use href="#icon-box"/></svg></div>
+          <h3>Back Issues</h3>
+          <p>Long boxes deep on single issues going back decades, organized by genre so digging never feels like work.</p>
+        </div>
+        <div class="shop-card">
+          <div class="shop-card-icon"><svg width="22" height="22"><use href="#icon-tag"/></svg></div>
+          <h3>Graphic Novels &amp; Trades</h3>
+          <p>Collected editions and original graphic novels, from jumping-on points to complete runs.</p>
+        </div>
+        <div class="shop-card">
+          <div class="shop-card-icon"><svg width="22" height="22"><use href="#icon-shirt"/></svg></div>
+          <h3>Apparel &amp; Supplies</h3>
+          <p>Bags, boards, boxes, and a wall of shirts and pins for whatever you're currently obsessed with.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LONG BOXES (pinned horizontal scroll) ===== -->
+  <section class="longbox-section" id="long-boxes">
+    <div class="container longbox-head reveal-up">
+      <p class="eyebrow">The Long Boxes</p>
+      <h2 class="section-title">Six genres deep, and we<br>know where everything is.</h2>
+    </div>
+    <div class="longbox-pin">
+      <div class="longbox-track" id="longbox-track">
+        <div class="longbox-card" style="--lb-accent:var(--red);">
+          <span class="longbox-index">01</span>
+          <h3>Superhero</h3>
+          <p>Capes, cosmic threats, and every crossover event since the long boxes started filling up.</p>
+          <div class="longbox-spines"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="longbox-card" style="--lb-accent:var(--gold);">
+          <span class="longbox-index">02</span>
+          <h3>Horror &amp; Weird</h3>
+          <p>Slow-burn dread and full-color nightmares, for readers who like the lights off.</p>
+          <div class="longbox-spines"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="longbox-card" style="--lb-accent:var(--blue);">
+          <span class="longbox-index">03</span>
+          <h3>Sci-Fi &amp; Space Opera</h3>
+          <p>Derelict ships, first contact, and futures that never quite go as planned.</p>
+          <div class="longbox-spines"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="longbox-card" style="--lb-accent:var(--red);">
+          <span class="longbox-index">04</span>
+          <h3>Indie &amp; Slice of Life</h3>
+          <p>Creator-owned, small-press, and the quiet stories that don't need a cape to land hard.</p>
+          <div class="longbox-spines"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="longbox-card" style="--lb-accent:var(--gold);">
+          <span class="longbox-index">05</span>
+          <h3>Manga &amp; Manhwa</h3>
+          <p>Ongoing series and complete runs, shelved spine-out so a whole volume is easy to spot.</p>
+          <div class="longbox-spines"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="longbox-card" style="--lb-accent:var(--blue);">
+          <span class="longbox-index">06</span>
+          <h3>Kids &amp; All-Ages</h3>
+          <p>The bin we point every new young reader toward first — no violence, no cynicism, just good stories.</p>
+          <div class="longbox-spines"><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMMUNITY / EVENTS ===== -->
+  <section class="section-padding" id="community">
+    <div class="container">
+      <div class="section-header center reveal-up">
+        <p class="eyebrow">More Than a Shelf of Comics</p>
+        <h2 class="section-title">Fan service means<br>actually showing up.</h2>
+      </div>
+      <div class="event-grid">
+        <div class="event-card">
+          <div class="event-icon"><svg width="20" height="20"><use href="#icon-book"/></svg></div>
+          <p class="event-tag">First Saturday in May</p>
+          <h3>Free Comic Book Day</h3>
+          <p>Free issues, costumed regulars, and a line out the door before we even open.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon"><svg width="20" height="20"><use href="#icon-calendar"/></svg></div>
+          <p class="event-tag">Every Wednesday</p>
+          <h3>New Comic Wednesdays</h3>
+          <p>The whole wall turns over. Pull list holders get first pick before we open to walk-ins.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon"><svg width="20" height="20"><use href="#icon-pen"/></svg></div>
+          <p class="event-tag">Recurring</p>
+          <h3>Artist Signings &amp; Variant Drops</h3>
+          <p>Local and touring creators sign stock, with exclusive variant covers while they last.</p>
+        </div>
+        <div class="event-card">
+          <div class="event-icon"><svg width="20" height="20"><use href="#icon-mic"/></svg></div>
+          <p class="event-tag">Monthly</p>
+          <h3>Trivia &amp; Community Nights</h3>
+          <p>Comic and pop-culture trivia after close — bring a team, or find one when you get here.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / STORY ===== -->
+  <section class="about-section" id="about">
+    <div class="container about-split">
+      <div class="about-visual reveal-up" aria-hidden="true">
+        <div class="ribbon-badge">
+          <span class="ribbon-badge-star"><svg width="26" height="26"><use href="#icon-star"/></svg></span>
+          <span class="ribbon-badge-line1">BEST COMIC SHOP</span>
+          <span class="ribbon-badge-line2">ORLANDO WEEKLY READERS' POLL</span>
+        </div>
+      </div>
+      <div class="about-copy reveal-up">
+        <p class="eyebrow">Our Story</p>
+        <h2 class="section-title">Twenty years, one shop,<br>zero shortcuts.</h2>
+        <p>A Comic Shop opened its doors in Oviedo in 2005 as a single spinner rack and a promise: stock what readers actually want, and treat every visit like the person behind the counter reads comics too — because they do.</p>
+        <p>Two decades later, that promise hasn't changed. We're still independently owned, still Oviedo's own, and still voted a favorite comic shop in the Orlando Weekly readers' poll year after year. New comics every Wednesday, long boxes deep on back issues, and a crew that will always tell you the truth about whether a book is worth it.</p>
+        <blockquote class="about-quote">&ldquo;If you love it, we probably stock it. If we don't, we'll get it.&rdquo;</blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section class="section-padding testimonials-section">
+    <div class="container">
+      <div class="section-header center reveal-up">
+        <p class="eyebrow">Word on the Wall</p>
+        <h2 class="section-title">What regulars say.</h2>
+      </div>
+      <div class="testimonial-grid">
+        <div class="speech-card reveal-up">
+          <div class="testimonial-stars"><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg></div>
+          <p>"I've had the same pull list here for six years. They know what I read better than I do at this point."</p>
+          <span class="speech-name">MARCUS T.</span>
+        </div>
+        <div class="speech-card reveal-up">
+          <div class="testimonial-stars"><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg></div>
+          <p>"Took my kid in for Free Comic Book Day and she left with a stack and a new favorite genre. We've been back every week since."</p>
+          <span class="speech-name">DANIELLE P.</span>
+        </div>
+        <div class="speech-card reveal-up">
+          <div class="testimonial-stars"><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg><svg width="14" height="14"><use href="#icon-star"/></svg></div>
+          <p>"Found back issues here I'd been hunting for years online. The long boxes are genuinely organized — no digging through junk."</p>
+          <span class="speech-name">OMAR K.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VISIT US ===== -->
+  <section class="section-padding visit-section" id="visit">
+    <div class="container">
+      <div class="section-header center reveal-up">
+        <p class="eyebrow">Visit the Shop</p>
+        <h2 class="section-title">431 Aulin Ave, Oviedo.</h2>
+      </div>
+      <div class="visit-grid">
+        <div class="visit-info reveal-up">
+          <div class="visit-status">
+            <span class="visit-status-dot" id="status-dot"></span>
+            <span id="status-text">Checking hours&hellip;</span>
+          </div>
+          <table class="hours-table">
+            <tbody>
+              <tr data-day="1"><td>Monday</td><td>Closed</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>11:00 AM – 7:00 PM</td></tr>
+              <tr data-day="3" class="is-wednesday"><td>Wednesday <span class="new-day-tag">New Comics</span></td><td>10:00 AM – 8:00 PM</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>11:00 AM – 7:00 PM</td></tr>
+              <tr data-day="5"><td>Friday</td><td>11:00 AM – 7:00 PM</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>12:00 PM – 5:00 PM</td></tr>
+            </tbody>
+          </table>
+          <div class="visit-detail"><svg width="16" height="16"><use href="#icon-pin"/></svg> 431 Aulin Ave, Suite B, Oviedo, FL 32765</div>
+          <div class="visit-detail"><svg width="16" height="16"><use href="#icon-phone"/></svg> (407) 622-1042</div>
+          <div class="visit-actions">
+            <a href="https://maps.google.com/?q=431+Aulin+Ave+Suite+B,+Oviedo,+FL+32765" target="_blank" rel="noopener" class="btn btn-primary">Get Directions</a>
+            <a href="https://stores.comichub.com/a_comic_shop" target="_blank" rel="noopener" class="btn btn-outline">Shop Online <svg width="13" height="13"><use href="#icon-arrow"/></svg></a>
+          </div>
+        </div>
+        <div class="map-frame reveal-up">
+          <iframe src="https://www.google.com/maps?q=431+Aulin+Ave+Suite+B,+Oviedo,+FL+32765&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map to A Comic Shop"></iframe>
+        </div>
+      </div>
+
+      <div class="pull-form-wrap reveal-up" id="pull-form">
+        <div class="pull-form-head">
+          <p class="eyebrow">Start Your Pull List</p>
+          <h3>Tell us what you're following.</h3>
+        </div>
+        <form id="pull-signup-form" class="pull-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pf-name">Name</label>
+              <input type="text" id="pf-name" name="name" placeholder="Your name">
+              <span class="field-error" id="pf-name-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="pf-email">Email or Phone</label>
+              <input type="text" id="pf-email" name="contact" placeholder="How should we reach you?">
+              <span class="field-error" id="pf-email-error"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="pf-titles">Titles you want held every week</label>
+            <textarea id="pf-titles" name="titles" rows="3" placeholder="One per line, or just tell us the vibe — we'll figure it out."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Submit Pull List Request</button>
+        </form>
+        <div class="form-success hidden" id="pull-success">
+          <svg width="20" height="20"><use href="#icon-check"/></svg>
+          <span>Got it — swing by the counter next time you're in and we'll get your list set up.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-logo">
+            <span class="logo-mark logo-mark--footer">A</span>
+            <span class="footer-logo-text">A Comic Shop</span>
+          </div>
+          <p>Independently owned comic book shop in Oviedo, FL. New comics every Wednesday since 2005.</p>
+        </div>
+        <div>
+          <div class="footer-heading">Explore</div>
+          <div class="footer-links">
+            <a href="#new-releases">New Releases</a>
+            <a href="#shop">Shop</a>
+            <a href="#long-boxes">Long Boxes</a>
+            <a href="#community">Events</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Shop</div>
+          <div class="footer-links">
+            <a href="#pull-list">Pull List</a>
+            <a href="#about">Our Story</a>
+            <a href="https://stores.comichub.com/a_comic_shop" target="_blank" rel="noopener">Online Storefront ↗</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-heading">Visit</div>
+          <div class="footer-links">
+            <span>431 Aulin Ave, Suite B</span>
+            <span>Oviedo, FL 32765</span>
+            <a href="tel:+14076221042">(407) 622-1042</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 A Comic Shop.</span>
+        <span>Portfolio redesign concept — not the official site.</span>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
