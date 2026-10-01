@@ -1,22 +1,22 @@
 gsap.registerPlugin(ScrollTrigger);
 
 /* ============================================================
-   NEW RELEASE TITLES (fictional, generic — used in the marquee
-   and the pull-list receipt demo)
+   TITLES — pulled from the shop's real current inventory on
+   their live ComicHub storefront (used in the marquee and the
+   pull-list receipt demo). Titles are facts, not copyrighted
+   artwork — no cover art is reproduced anywhere on this site.
    ============================================================ */
 const NEW_TITLES = [
-  "Cosmic Ranger #14",
-  "The Ossuary #3",
-  "Signal Lost #8",
-  "Blade of the Quiet Sun Vol. 2",
-  "Paper Moon Diner #6",
-  "Iron Vanguard #41",
-  "Hollow Creek #2",
-  "Velocity #119",
-  "The Crimson Watch #7",
-  "Moonfall Academy Vol. 4",
-  "Derelict #5",
-  "Pale Star #22"
+  "20 Fists #1",
+  "A Righteous Thirst for Vengeance #1",
+  "A Thing Called Truth #1",
+  "Action Comics 2021 Annual",
+  "Alice in Leatherland #1",
+  "Alien #1",
+  "Alien #4",
+  "Amazing Fantasy #3",
+  "Amazing Spider-Man #74",
+  "Amazing Spider-Man #75"
 ];
 
 /* ============================================================
