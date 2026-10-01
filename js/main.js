@@ -1,5 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
+// Fonts and the long-box photo can finish loading after ScrollTrigger
+// has already measured the page, which leaves the pinned Long Boxes
+// section's spacer sized against stale layout. Recomputing once
+// everything has actually loaded keeps the pin math correct.
+window.addEventListener("load", () => ScrollTrigger.refresh());
+
 /* ============================================================
    TITLES — pulled from the shop's real current inventory on
    their live ComicHub storefront (used in the marquee and the
