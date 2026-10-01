@@ -348,9 +348,7 @@ html[data-theme="light"] .theme-toggle-mobile .theme-label-light { display: inli
 
 .marquee-strip { background: var(--ink); padding: 20px 0; overflow: hidden; }
 html[data-theme="light"] .marquee-strip { background: var(--ink); }
-.marquee-track { display: flex; gap: 36px; width: max-content; animation: marquee 34s linear infinite; }
-.marquee-strip:hover .marquee-track { animation-duration: 110s; }
-@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.marquee-track { display: flex; gap: 36px; width: max-content; }
 .marquee-item {
   font-family: var(--font-mono); font-weight: 700; font-size: 14px;
   color: var(--paper); white-space: nowrap; display: flex; align-items: center; gap: 10px;

@@ -144,13 +144,34 @@ document.querySelectorAll(".stat-num[data-count]").forEach((el) => {
 
 /* ============================================================
    NEW RELEASES MARQUEE
+   Driven by a GSAP tween (not a CSS @keyframes animation) so
+   hovering can smoothly change its timeScale — slowing it down
+   and speeding it back up — without ever resetting its position,
+   which a CSS animation-duration swap would do.
    ============================================================ */
+const marqueeStrip = document.querySelector(".marquee-strip");
 const marqueeTrack = document.getElementById("marquee-track");
-if (marqueeTrack) {
+if (marqueeTrack && marqueeStrip) {
   const items = NEW_TITLES.concat(NEW_TITLES).map((title) =>
     `<span class="marquee-item"><span class="marquee-dot"></span>${title}</span>`
   ).join("");
   marqueeTrack.innerHTML = items;
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduceMotion) {
+    const marqueeTween = gsap.to(marqueeTrack, {
+      xPercent: -50,
+      duration: 34,
+      ease: "none",
+      repeat: -1
+    });
+    marqueeStrip.addEventListener("mouseenter", () => {
+      gsap.to(marqueeTween, { timeScale: 0.25, duration: 0.5, ease: "power2.out", overwrite: true });
+    });
+    marqueeStrip.addEventListener("mouseleave", () => {
+      gsap.to(marqueeTween, { timeScale: 1, duration: 0.5, ease: "power2.out", overwrite: true });
+    });
+  }
 }
 
 /* ============================================================
