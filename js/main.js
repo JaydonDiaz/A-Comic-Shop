@@ -3,8 +3,14 @@ gsap.registerPlugin(ScrollTrigger);
 // Fonts and the long-box photo can finish loading after ScrollTrigger
 // has already measured the page, which leaves the pinned Long Boxes
 // section's spacer sized against stale layout. Recomputing once
-// everything has actually loaded keeps the pin math correct.
+// everything has actually loaded keeps the pin math correct. Custom
+// fonts in particular can swap in (shifting heading heights/line
+// wraps) after the window "load" event already fired, so both are
+// covered here.
 window.addEventListener("load", () => ScrollTrigger.refresh());
+if (document.fonts && document.fonts.ready) {
+  document.fonts.ready.then(() => ScrollTrigger.refresh());
+}
 
 /* ============================================================
    TITLES — pulled from the shop's real current inventory on
@@ -213,15 +219,19 @@ function initLongboxScroll() {
 
   const mm = gsap.matchMedia();
   mm.add("(min-width: 701px)", () => {
-    const distance = track.scrollWidth - window.innerWidth;
-    if (distance <= 0) return;
+    // Measured as functions (not plain numbers) so invalidateOnRefresh
+    // actually re-measures scrollWidth on every refresh — a late font
+    // swap or image load changing the track's width used to leave the
+    // pin's distance baked in from its very first, possibly-wrong
+    // measurement, which could desync the pin from its content.
+    const getDistance = () => Math.max(0, track.scrollWidth - window.innerWidth);
     const tween = gsap.to(track, {
-      x: -distance,
+      x: () => -getDistance(),
       ease: "none",
       scrollTrigger: {
         trigger: pin,
         start: "top top",
-        end: () => "+=" + (distance + window.innerHeight * 0.6),
+        end: () => "+=" + (getDistance() + window.innerHeight * 0.6),
         scrub: 0.6,
         pin: true,
         invalidateOnRefresh: true
